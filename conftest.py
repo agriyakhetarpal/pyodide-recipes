@@ -97,11 +97,6 @@ def set_configs():
         + ["--enable-features=WebAssemblyExperimentalJSPI"],
     )
 
-    pytest_pyodide_config.set_flags(
-        "node",
-        pytest_pyodide_config.get_flags("node") + ["--experimental-wasm-jspi"],
-    )
-
     pytest_pyodide_config.set_load_pyodide_script(
         "chrome",
         """
