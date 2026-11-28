@@ -3,7 +3,7 @@ from pathlib import Path
 import pytest
 
 
-@pytest.mark.xfail_browsers(firefox="Requires JSPI", safari="Requires JSPI")
+@pytest.mark.xfail_browsers(safari="Requires JSPI")
 def test_fastapi(selenium):
 
     @run_in_pyodide(packages=["fastapi", "pytest_asyncio"])
